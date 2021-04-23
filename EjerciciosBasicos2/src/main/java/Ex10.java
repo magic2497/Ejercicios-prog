@@ -7,20 +7,10 @@ public class Ex10 {
         String dia = entrada.nextLine();
         switch (dia) {
             case "lunes":
-                System.out.println(dia + " es laborable");
-                break;
             case "martes":
-                System.out.println(dia + " es laborable");
-                break;
             case "miercoles":
-                System.out.println(dia + " es laborable");
-                break;
             case "jueves":
-                System.out.println(dia + " es laborable");
-                break;
             case "viernes":
-                System.out.println(dia + " es laborable");
-                break;
             case "sabado":
                 System.out.println(dia + " es laborable");
                 break;
