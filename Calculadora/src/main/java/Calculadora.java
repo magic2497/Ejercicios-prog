@@ -6,28 +6,28 @@ public class Calculadora {
     public static void main(String[] args) {
         Service service = new Service();
         Integer contador = 1;
-        String operacion = "";
-        String decision = "";
-        while (contador < 2) {
+                String operacion = "";
+                String decision = "";
+                while (contador < 2) {
 
-            while (contador < 2) {
-                System.out.println("***********************************************************************");
-                System.out.println("**********Bienvenido a la calculadora mas puntera del mercado**********");
-                System.out.println("*********Introduce el nombre de la accion que quieres realizar*********");
-                System.out.println("***********************************************************************");
-                System.out.println("                             1-sumar                                   ");
-                System.out.println("                             2-restar                                  ");
-                System.out.println("                             3-multiplicar                             ");
-                System.out.println("                             4-dividir                                 ");
-                System.out.println("                             5-resto                                   ");
-                System.out.println("                             6-apagar                                  ");
-                System.out.println("***********************************************************************");
-                System.out.println("***********************************************************************");
-                System.out.println(" ");
+                    while (contador < 2) {
+                        System.out.println("***********************************************************************");
+                        System.out.println("**********Bienvenido a la calculadora mas puntera del mercado**********");
+                        System.out.println("*********Introduce el nombre de la accion que quieres realizar*********");
+                        System.out.println("***********************************************************************");
+                        System.out.println("                             1-sumar                                   ");
+                        System.out.println("                             2-restar                                  ");
+                        System.out.println("                             3-multiplicar                             ");
+                        System.out.println("                             4-dividir                                 ");
+                        System.out.println("                             5-resto                                   ");
+                        System.out.println("                             6-apagar                                  ");
+                        System.out.println("***********************************************************************");
+                        System.out.println("***********************************************************************");
+                        System.out.println(" ");
 
-                Scanner entrada = new Scanner(System.in);
-                operacion = entrada.nextLine();
-                if (service.validarOperacion(operacion)) {
+                        Scanner entrada = new Scanner(System.in);
+                        operacion = entrada.nextLine();
+                        if (service.validarOperacion(operacion)) {
                     System.out.println("*********************Has elegido la accion " + operacion + "**********************");
                     System.out.println(" ");
 
