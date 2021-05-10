@@ -1,4 +1,4 @@
-/*
+
 package ex18;
 
 
@@ -7,57 +7,32 @@ import java.util.Scanner;
 
 
 public class Vectores {
-    static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+        int[] v1, v2, v3;
 
-        int[] vector1 = new int[leerEntero("Espacios del primer vector: ")];
-        int[] vector2 = new int[leerEntero("Espacios del segundo vector: ")];
-        int[] vectorConcatenado = new int[vector1.length+vector2.length];
-        System.out.println("\nIntroduciendo valores primer vector");
-        llenarArray(vector1);
-        System.out.println();
-        System.out.println("\nIntroduciendo valores segundo vector");
-        llenarArray(vector2);
-        System.out.println();
-        concatenarArrays(vector1, vector2, vectorConcatenado);
-        System.out.println("Primer vector");
-        visualizar(vector1);
-        System.out.println("\nSegundo vector");
-        visualizar(vector2);
-        System.out.println("\nVector resultante");
-        visualizar(vectorConcatenado);
+        v1 = new int[10];
+        v2 = new int[10];
 
-
-    }
-
-    private static void concatenarVectores(int[] vector1, int[] vector2,
-                                         int[] vectorConcatenado) {
-        for (int i = 0; i<vector1.length; i++) {
-            vectorConcatenado[i] = vector1[i];
+        for (int i = 0; i < v1.length; i++) {
+            v1[i] = (int) (10*Math.random()+1);
+            v2[i] = (int) (10*Math.random()+1);
         }
 
-        for (int i = 0, j=vector2.length; i<vector2.length; i++, j++) {
-            vectorConcatenado[j] = vector2[i];
+
+        v3 = new int[v1.length + v2.length];
+        for (int i = 0; i < v1.length; i++) {
+            v3[i] = v1[i];
+            v3[v1.length + i] = v2[i];
         }
+
+
+        for (int i = 0; i < v3.length; i++) {
+            System.out.print(v3[i] + " ");
+        }
+
+
     }
 
-    private static void llenarVector(int[] pVector){
-        for(int i=0;i<pVector.length;i++){
-            pVector[i] = leerEntero("Inserta el valor " + (i+1) + ": ");
-        }
-    }
-
-    private static void visualizar(int[] pArray){
-        for (int i=0; i<pArray.length; i++) {
-            System.out.print(pArray[i] + " ");
-        }
-    }
-
-    private static int leerEntero(String s){
-        System.out.print(s);
-        int num = sc.nextInt();
-        return num;
-    }
 }
-*/
+
